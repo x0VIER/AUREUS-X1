@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+faster-whisper
+edge-tts
+requests
+python-dotenv
+asyncio
+websockets
+pydantic
+aiohttp

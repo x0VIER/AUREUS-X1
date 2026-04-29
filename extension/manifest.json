@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "AUREUS X1 PRO: Premium Interceptor",
+  "version": "3.1",
+  "description": "Production-grade video interceptor with persistent Offscreen WebSocket engine.",
+  "permissions": [
+    "offscreen",
+    "tabs",
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:8005/*",
+    "https://www.youtube.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src ws://127.0.0.1:8005 http://127.0.0.1:8005"
+  }
+}

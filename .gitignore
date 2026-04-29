@@ -1,0 +1,16 @@
+.env
+*.log
+__pycache__/
+venv/
+.pytest_cache/
+*.pyc
+temp_audio/
+output_audio/
+*.network-request
+*.network-response
+.DS_Store
+aureus_x1_hero_banner_*.png
+extension/dist/
+node_modules/
+downloads/
+TEST SCREEN SHOTS/

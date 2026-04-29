@@ -1,0 +1,8 @@
+body { width: 220px; padding: 15px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f4f7; }
+h1 { font-size: 18px; color: #0078d4; margin-top: 0; }
+.status-box { padding: 10px; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+p { font-size: 13px; margin: 5px 0; }
+code { background: #eee; padding: 2px 4px; border-radius: 4px; }
+.status-checking { font-weight: bold; color: black; }
+.status-online { font-weight: bold; color: green; }
+.status-offline { font-weight: bold; color: red; }
