@@ -1,40 +1,78 @@
-# AUREUS X1: High-Performance Video Interception
+# AUREUS X1
 
 ![AUREUS X1 Banner](docs/images/banner.png)
 
-## Overview
-AUREUS X1 is a technical framework designed for real-time interception and English translation of Spanish-language video streams. It implements a local-hybrid architecture to solve the high latency typically associated with cloud-based multimodal processing. By caching transcription models in VRAM and utilizing high-speed translation APIs, the system achieves near-instantaneous dubbing.
+<p align="center">
+    <img src="https://img.shields.io/github/languages/top/x0VIER/AUREUS-X1?style=flat-square" alt="Top Language">
+    <img src="https://img.shields.io/github/repo-size/x0VIER/AUREUS-X1?style=flat-square" alt="Repo Size">
+    <img src="https://img.shields.io/github/commit-activity/m/x0VIER/AUREUS-X1?style=flat-square" alt="Commit Activity">
+    <img src="https://img.shields.io/github/license/x0VIER/AUREUS-X1?style=flat-square" alt="License">
+</p>
 
-## Technical Architecture
-The system is composed of several decoupled modules that communicate via a central FastAPI WebSocket orchestrator.
-
-### Core Modules
-*   **Transcription Engine:** Uses `faster-whisper` for local audio-to-text conversion. The model is loaded as a singleton to prevent initialization overhead during request cycles.
-*   **Translation Layer:** Integrates Gemini 2.0 Flash via OpenRouter for context-aware, low-latency translation.
-*   **Synthesis Engine:** Implements `edge-tts` for high-fidelity neural voice synthesis.
-*   **Browser Interceptor:** A Chrome Extension (Manifest V3) that monitors DOM changes on YouTube and bridges video controls to the backend.
-
-## Getting Started
-
-### Prerequisites
-*   Python 3.10 or higher
-*   FFmpeg (required for audio stream processing)
-*   Google Chrome
-
-### Installation and Setup
-1. Clone the repository to your local environment.
-2. Initialize the environment and install dependencies:
-   ```powershell
-   python main.py --setup
-   ```
-3. Configure your environment variables in the `.env` file. You must provide a valid OpenRouter API key.
-4. Load the `extension` folder into Chrome as an unpacked extension.
-
-## For Automated Agents
-If you are an AI agent initializing this project, you can replicate the full environment by running the setup script in a Windows-compatible terminal. Ensure Port 8005 is available for the WebSocket bridge. For detailed system logic, refer to `AUREUS_X1_ENCYCLOPEDIA.md`.
-
-## Metadata and Discovery
-Primary keywords: AI Video Interceptor, Real-time Translation, Local Hybrid Architecture, faster-whisper, Gemini 2.0 Flash, edge-tts, Chrome Extension, VRAM Caching.
+AUREUS X1 is a high-performance framework for real-time interception and English translation of Spanish video streams. It utilizes a local-hybrid architecture to achieve zero-latency dubbing through VRAM model caching and high-speed API orchestration.
 
 ---
-Developed by x0VIER. Optimized for professional distribution.
+
+## 📝 Table of Contents
+- [Overview](#overview)
+- [Technical Specifications](#technical-specifications)
+- [Architecture](#architecture)
+- [Getting Started](#getting-started)
+- [Roadmap](#roadmap)
+
+---
+
+## 🚀 Overview
+AUREUS X1 addresses the latency bottleneck in AI video translation. By moving the transcription layer locally (Faster-Whisper) and maintaining persistent model singletons, it removes the typical 5-10 second cold-start lag.
+
+---
+
+## ⚙️ Technical Specifications
+
+| Component | Technology | Role |
+| :--- | :--- | :--- |
+| **Transcription** | `faster-whisper` | Local VRAM-cached STT |
+| **Translation** | `Gemini 2.0 Flash` | Context-aware LLM translation |
+| **Synthesis** | `edge-tts` | Neural voice generation |
+| **Frontend** | `Chrome Extension` | Manifest V3 DOM Interceptor |
+| **Backend** | `FastAPI` | WebSocket Orchestrator |
+
+---
+
+## 🏗️ Architecture
+The system operates as a decoupled bridge between the browser DOM and local inference engines.
+
+*   **Persistent Singletons:** Whisper models remain in VRAM to ensure instantaneous processing.
+*   **WebSocket Bridge:** Zero-latency communication on Port 8005.
+*   **Dynamic Volume Control:** Automated ducking of original audio during translation overlay.
+
+---
+
+## 📥 Getting Started
+
+### Prerequisites
+*   Python 3.10+
+*   FFmpeg
+*   Google Chrome
+
+### Quick Setup
+```powershell
+# Clone and initialize
+git clone https://github.com/x0VIER/AUREUS-X1.git
+cd AUREUS-X1
+python main.py --setup
+```
+
+---
+
+## 🗺️ Roadmap
+- [x] Initial local-hybrid architecture implementation
+- [x] Chrome Extension (Manifest V3) interception
+- [x] Multi-model singleton caching
+- [ ] Real-time lip-syncing integration
+- [ ] Multi-language support (Extended beyond Spanish)
+- [ ] Native Electron wrapper for standalone use
+
+---
+
+Developed by [x0VIER](https://github.com/x0VIER). Inspired by high-end Rust engineering standards.
