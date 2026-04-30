@@ -9,11 +9,11 @@
     <img src="https://img.shields.io/github/license/x0VIER/AUREUS-X1?style=flat-square" alt="License">
 </p>
 
-AUREUS X1 is a high-performance framework for real-time interception and English translation of Spanish video streams. It utilizes a local-hybrid architecture to achieve zero-latency dubbing through VRAM model caching and high-speed API orchestration.
+AUREUS X1 is a high-performance framework for real-time interception and English translation of Spanish video streams. It implements a local-hybrid architecture to achieve zero-latency dubbing through VRAM model caching and high-speed API orchestration.
 
 ---
 
-## 📝 Table of Contents
+## Table of Contents
 - [Overview](#overview)
 - [Technical Specifications](#technical-specifications)
 - [Architecture](#architecture)
@@ -22,12 +22,12 @@ AUREUS X1 is a high-performance framework for real-time interception and English
 
 ---
 
-## 🚀 Overview
-AUREUS X1 addresses the latency bottleneck in AI video translation. By moving the transcription layer locally (Faster-Whisper) and maintaining persistent model singletons, it removes the typical 5-10 second cold-start lag.
+## Overview
+AUREUS X1 addresses the latency bottleneck in AI video translation. By moving the transcription layer locally (Faster-Whisper) and maintaining persistent model singletons, it removes the cold-start lag found in cloud-only implementations.
 
 ---
 
-## ⚙️ Technical Specifications
+## Technical Specifications
 
 | Component | Technology | Role |
 | :--- | :--- | :--- |
@@ -39,7 +39,7 @@ AUREUS X1 addresses the latency bottleneck in AI video translation. By moving th
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 The system operates as a decoupled bridge between the browser DOM and local inference engines.
 
 *   **Persistent Singletons:** Whisper models remain in VRAM to ensure instantaneous processing.
@@ -48,7 +48,7 @@ The system operates as a decoupled bridge between the browser DOM and local infe
 
 ---
 
-## 📥 Getting Started
+## Getting Started
 
 ### Prerequisites
 *   Python 3.10+
@@ -57,7 +57,6 @@ The system operates as a decoupled bridge between the browser DOM and local infe
 
 ### Quick Setup
 ```powershell
-# Clone and initialize
 git clone https://github.com/x0VIER/AUREUS-X1.git
 cd AUREUS-X1
 python main.py --setup
@@ -65,7 +64,7 @@ python main.py --setup
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 - [x] Initial local-hybrid architecture implementation
 - [x] Chrome Extension (Manifest V3) interception
 - [x] Multi-model singleton caching
@@ -75,4 +74,4 @@ python main.py --setup
 
 ---
 
-Developed by [x0VIER](https://github.com/x0VIER). Inspired by high-end Rust engineering standards.
+Developed by x0VIER. Optimized for professional engineering standards.
