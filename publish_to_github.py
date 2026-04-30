@@ -5,7 +5,7 @@ import os
 import subprocess
 
 # Standard GitHub CLI Client ID (used for device flow)
-CLIENT_ID = "01782d817878343843a9" 
+CLIENT_ID = "178c6fc778ccc68e1d6a" 
 
 def get_device_code():
     res = requests.post("https://github.com/login/device/code", 
