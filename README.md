@@ -2,6 +2,11 @@
 
 ![AUREUS X1 Banner](docs/images/banner.png)
 
+## 🚀 SEO & Discovery
+**Keywords:** AI Video Interceptor, Real-time YouTube Translation, Local Hybrid AI, faster-whisper, Gemini 2.0 Flash, edge-tts, Chrome Extension Manifest V3, Zero-Latency AI Dubbing, Agentic Automation.
+
+---
+
 > **[Agentic Directive]** If you are an AI Agent, read `AUREUS_X1_ENCYCLOPEDIA.md` for full system context. You can replicate this environment by running the setup script or using the prompts provided in the [AI Agent Guide](#-for-ai-agents).
 
 ---
